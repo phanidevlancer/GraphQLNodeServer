@@ -60,7 +60,7 @@ var getCourse = function(args) {
 var getCourses = function(args) {
     if (args.topic) {
         var topic = args.topic;
-        return coursesData.filter(course => course.topic === topic);
+        return coursesData.filter(course => course.topic.toLowerCase === topic.toLowerCase);
     } else {
         return coursesData;
     }
@@ -69,7 +69,7 @@ var getCourses = function(args) {
 var updateCourseTopic = function({id, topic}) {
     coursesData.map(course => {
         if (course.id === id) {
-            course.topic.toLowerCase = topic.toLowerCase;
+            course.topic = topic;
             return course;
         }
     });
