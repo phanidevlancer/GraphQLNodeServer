@@ -88,7 +88,7 @@ var app = express();
 app.use('/', graphqlHTTP({
     schema: schema,
     rootValue: root,
-    title: 'Phanindra GraphQL',
+    title: 'Phanindra',
     graphiql: true
 }));
 
