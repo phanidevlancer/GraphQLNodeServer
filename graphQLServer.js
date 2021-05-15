@@ -88,6 +88,7 @@ var app = express();
 app.use('/graphql', graphqlHTTP({
     schema: schema,
     rootValue: root,
+    title: 'Phanindra GraphQL Server',
     graphiql: true
 }));
 
