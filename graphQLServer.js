@@ -85,7 +85,7 @@ var root = {
 
 // Create an expres server and a GraphQL endpoint
 var app = express();
-app.use('/graphql', graphqlHTTP({
+app.use('/', graphqlHTTP({
     schema: schema,
     rootValue: root,
     title: 'Phanindra GraphQL Server',
