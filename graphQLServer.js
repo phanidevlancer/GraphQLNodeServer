@@ -89,7 +89,7 @@ app.use('/', graphqlHTTP({
     schema: schema,
     rootValue: root,
     title: 'Phanindra',
-    // graphiql: true
+    graphiql: true
 }));
 
 app.listen(PORT, () => console.log('Express GraphQL Server Now Running On localhost: ${ PORT }/graphql'));
