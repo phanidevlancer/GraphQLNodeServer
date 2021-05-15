@@ -2,6 +2,8 @@ var express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const {buildSchema} = require('graphql');
 
+const PORT = process.env.PORT || 3000;
+
 // GraphQL Schema
 var schema = buildSchema(`
     type Query {
@@ -89,4 +91,4 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }));
 
-app.listen(4000, () => console.log('Express GraphQL Server Now Running On localhost:4000/graphql'));
+app.listen(PORT, () => console.log('Express GraphQL Server Now Running On localhost: ${ PORT }/graphql'));
