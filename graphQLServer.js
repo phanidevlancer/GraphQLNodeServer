@@ -69,7 +69,7 @@ var getCourses = function(args) {
 var updateCourseTopic = function({id, topic}) {
     coursesData.map(course => {
         if (course.id === id) {
-            course.topic = topic;
+            course.topic.toLowerCase = topic.toLowerCase;
             return course;
         }
     });
